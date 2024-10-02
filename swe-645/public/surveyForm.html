@@ -1,0 +1,192 @@
+<!---
+Name: RamyaSahithya Magani
+GNumber: G01425752
+--->
+
+<!-- The name, address, phone number, email, and basic student information are all gathered on this form.
+Additionally, it gets their thoughts on the university, their favorite parts of campus, and whether or not they would suggest it.
+
+Different input types, including text fields, date pickers, checkboxes, radio buttons, and text areas, are used to make the form.
+It has buttons for canceling and submitting. The page also features a navigation bar that enables students to go back to the department page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Student Survey Form</title>
+    <link rel="stylesheet" href="survey.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="topnav">
+        <ul>
+          <li>
+            <a
+              href="http://ramya-swe645.s3-website-us-east-1.amazonaws.com/index.html"
+              >Home</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h2>STUDENT SURVEY FORM</h2>
+    <form class="form-container">
+      <div class="form-group">
+        <label for="fname">FIRST NAME <span class="sp">*</span></label>
+        <input type="text" class="form-control" id="fname" required />
+      </div>
+      <div class="form-group">
+        <label for="lname">LAST NAME <span class="sp">*</span></label>
+        <input type="text" class="form-control" id="lname" required />
+      </div>
+      <div class="form-group">
+        <label for="street">STREET ADDRESS <span class="sp">*</span></label>
+        <input type="text" class="form-control" id="street" required />
+      </div>
+      <div class="form-group">
+        <label for="city">CITY <span class="sp">*</span></label>
+        <input type="text" class="form-control" id="city" required />
+      </div>
+      <div class="form-group">
+        <label for="state">STATE <span class="sp">*</span></label>
+        <input type="text" class="form-control" id="state" required />
+      </div>
+      <div class="form-group">
+        <label for="zip">ZIP <span class="sp">*</span></label>
+        <input type="text" class="form-control" id="zip" required />
+      </div>
+      <div class="form-group">
+        <label for="tele">TELEPHONE NUMBER <span class="sp">*</span></label>
+        <input type="text" class="form-control" id="tele" required />
+      </div>
+      <div class="form-group">
+        <label for="email">EMAIL <span class="sp">*</span></label>
+        <input type="text" class="form-control" id="email" required />
+      </div>
+      <div class="form-group">
+        <label for="date">DATE OF SURVEY <span class="sp">*</span></label>
+        <input type="date" class="form-control" id="date" required />
+      </div>
+      <div class="form-group">
+        <p>WHAT IS MOST LIKED ABOUT THE CAMPUS?</p>
+        <div class="checkbox-group">
+          <div class="checkbox-item">
+            <input
+              type="checkbox"
+              id="students"
+              name="students"
+              value="Students"
+            />
+            <label for="students">Students</label>
+          </div>
+          <div class="checkbox-item">
+            <input
+              type="checkbox"
+              id="location"
+              name="location"
+              value="location"
+            />
+            <label for="location">Location</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="campus" name="campus" value="campus" />
+            <label for="campus">Campus</label>
+          </div>
+          <div class="checkbox-item">
+            <input
+              type="checkbox"
+              id="atmosphere"
+              name="atmosphere"
+              value="atmosphere"
+            />
+            <label for="atmosphere">Atmosphere</label>
+          </div>
+          <div class="checkbox-item">
+            <input
+              type="checkbox"
+              id="dormrooms"
+              name="dormrooms"
+              value="dormrooms"
+            />
+            <label for="dormrooms">Dorm Rooms</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="sports" name="sports" value="sports" />
+            <label for="sports">Sports</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" id="interest">
+        <p>HOW DID THE STUDENTS BECOME INTERESTED IN UNIVERSITY?</p>
+        <div class="radiobtn">
+          <input type="radio" id="friends" name="interest" value="friends" />
+          <label for="friends">Friends</label>
+        </div>
+        <div class="radiobtn">
+          <input
+            type="radio"
+            id="television"
+            name="interest"
+            value="television"
+          />
+          <label for="television">Television</label>
+        </div>
+        <div class="radiobtn">
+          <input type="radio" id="Internet" name="interest" value="Internet" />
+          <label for="Internet">Internet</label>
+        </div>
+        <div class="radiobtn">
+          <input type="radio" id="other" name="interest" value="other" />
+          <label for="other">Other</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <p>LIKELIHOOD TO RECOMMEND GMU TO OTHERS ?</p>
+        <select id="like" name="like">
+          <option value=""></option>
+          <option value="vl">Very Likely</option>
+          <option value="l">Likely</option>
+          <option value="ul">UnLikely</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="raffle">RAFFLE</label>
+        <input
+          type="text"
+          id="raffle"
+          name="raffle"
+          placeholder="Enter at least ten comma-separated numbers (1-100)"
+          required
+        />
+        <small id="raffleHelp" class="form-text text-muted">
+          Please enter at least ten comma-separated numbers ranging from 1
+          through 100.
+        </small>
+      </div>
+      <div class="form-group">
+        <label for="comments">ADDITIONAL COMMENTS</label><br />
+        <textarea
+          id="comments"
+          name="comments"
+          placeholder="Write something.."
+        ></textarea>
+        <br />
+      </div>
+      <div class="buttons">
+        <input type="submit" value="Submit" />
+        <input type="reset" class="btn btn-secondary" value="Cancel" />
+      </div>
+    </form>
+    <footer class="text-center py-4">
+      <p>Copyright © RamyaSahithya Magani</p>
+    </footer>
+  </body>
+</html>
